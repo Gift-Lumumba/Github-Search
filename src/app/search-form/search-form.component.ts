@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from '../services/profile.service';
+import { Search } from '../search';
 
 @Component({
   selector: 'app-search-form',
@@ -6,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-form.component.css']
 })
 export class SearchFormComponent implements OnInit {
+  newSearch = new Search('');
+  
+  submitUser(name){
+    this.profileService.getProfileInfo(name.value)
+  }
 
-  constructor() { }
+  constructor(private profileService:ProfileService) { }
 
   ngOnInit() {
   }
