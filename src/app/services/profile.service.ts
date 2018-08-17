@@ -17,7 +17,7 @@ this.user=new User('','','');
 
 getProfileInfo(username){
   interface ApiResponse{
-    user:string;
+    name:string;
     login:string;
     avatar_url:string;
     
@@ -25,7 +25,7 @@ getProfileInfo(username){
 const promise =new Promise((resolve,reject)=>{
   this.http.get<ApiResponse>(environment.apiUrl + username + environment.apikey).toPromise().then(response => {
       
-      this.user.name=response.user;
+      this.user.name=response.name;
       this.user.login=response.login;
       this.user.avatar_url=response.avatar_url;
 
@@ -37,7 +37,7 @@ const promise =new Promise((resolve,reject)=>{
         )
     })
 
-    return promise
+    return promise;
   
 }
 }
