@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ReposComponent } from './repos/repos.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { ProfileService } from './services/profile.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { SearchFormComponent } from './search-form/search-form.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
