@@ -1,8 +1,46 @@
-
-<div class="container-fluid">
-  <h1>Github Search</h1>
+<div *ngIf="user">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{user.login}} &nbsp;<small>{{user.name}}</small>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="{{user.avatar_url}}" class="img-circle" alt="">
+        </div>
+        <div class="col-sm-3">
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="user.email"><a href="{{user.email}}">{{user.email}}</a></li>
+            <li class="list-group-item">{{user.location}}</li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <div>
+            <p>
+              <span class="label label-success">{{user.followers}} Followers</span>
+              &nbsp;
+              <span class="label label-warning">{{user.following}} Following</span>
+              &nbsp;
+              <span class="label label-primary">{{user.public_repos}} Repositories</span>
+              &nbsp;
+              
+            </p>
+            <p><a href="{{user.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on Github</a></p>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Repositories</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <app-search-form></app-search-form>
 <div id="userprofile">
   <span><p>Name is {{user.name}} and Github username is {{user.login}}</p></span>
+  <p>Has {{user.public_repos}} repositories</p>
+  <p>Followers {{user.followers}}</p>
+  <p>Following {{user.following}}</p>
 </div>
