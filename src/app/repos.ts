@@ -1,5 +1,5 @@
 export class Repos {
-  constructor(public name: string, public html_url: string, public description: string) {
+  constructor(public public_repos:number) {
 
   }
 }
