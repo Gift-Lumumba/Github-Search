@@ -1,25 +1,62 @@
-.container-fluid{
-  background: black;
-  padding: 100px;
+.header{
+  color: #F15A29;
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Abril Fatface', cursive;
+  text-decoration-line: underline;
 }
-#username{
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-  height: 35px;
+.container-fluid{
+  background: url(../../assets/background.jpeg);
+  background-attachment: fixed;
+  padding: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-#button{
-  text-align: center;
-  width: 20%;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
+#userprofile{
+  color: #F15A29;
+  font-size: 13px;
+  padding-left: 120px;
+}
+.ul{
+  font-size: 22px;
+  font-family: 'Berkshire Swash', cursive;
+}
+.names{
+  font-size: 20px;
+  color: #F15A29;
+  font-family: 'Oleo Script', cursive;
+}
+#emailocation{
+  font-size: 13px;
+}
+#email{
+  padding-left:80px; 
+  width: 300px;
+}
+#labels{
+  font-size: 15px;
+  font-family: 'Oleo Script', cursive;
+}
+#view{
   font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
+  font-family: 'Oleo Script', cursive;
+}
+.panel{
+  background: black;
+  border: black;
+}
+.repos{
+  font-family: 'Oleo Script', cursive;
+  font-size: 23px;
+  color: black;
+  text-align: center;
+  
+}
+#body{
+  background:  black;
+  border-radius: 20px;
+}
+#heading{
+  background: black;
 }
