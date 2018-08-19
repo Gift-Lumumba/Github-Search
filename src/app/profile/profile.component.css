@@ -43,8 +43,10 @@
   font-family: 'Oleo Script', cursive;
 }
 .panel{
-  background: black;
-  border: black;
+  background: url(../../assets/background.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .repos{
   font-family: 'Oleo Script', cursive;
@@ -54,8 +56,10 @@
   
 }
 #body{
-  background:  black;
-  border-radius: 20px;
+  background: url(../../assets/background.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; 
 }
 #heading{
   background: black;

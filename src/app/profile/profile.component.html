@@ -1,11 +1,11 @@
-
 <div class="container-fluid">
   <br>
   <h1 class="header">Github Search</h1>
-  <form action="">
     <br>
-
-      <app-search-form></app-search-form>
+    <form action="">
+      <div class="form-group">
+          <app-search-form></app-search-form>
+      </div>
       <br>
       <div id="userprofile">
         <ul class="ul">
@@ -54,9 +54,11 @@
                 </div>
                 <div class="panel-body" *ngFor="let repo of repos">
                   <p class="clearfix">
-                   <p class="reposs"> {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View this project on Github</a></p>
+                   <span class="reposs"> {{repo.name}} </span>
                   </p>
-                  <p>{{repo.description}}</p>
+                  <p class="description">{{repo.description}}</p>
+                  <br>
+                  <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View this project on Github</a>
                 </div>
               </div>
             </div>
