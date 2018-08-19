@@ -14,7 +14,7 @@ user:User;
 repos:Repos;
 
 constructor(private http:HttpClient) { 
-this.user=new User('','','',0,'','','','','');
+this.user=new User('','','',0,'','','','','','');
   }
 
 getProfileInfo(username){
@@ -28,6 +28,7 @@ getProfileInfo(username){
     email:string;
     location:string;
     html_url:string;
+    repos_url:string;
     
 }
 const promise =new Promise((resolve,reject)=>{
@@ -42,7 +43,7 @@ const promise =new Promise((resolve,reject)=>{
       this.user.email=response.email;
       this.user.location=response.location;
       this.user.html_url=response.html_url;
-
+      this.user.repos_url=response.repos_url;
       resolve()
     },
 
