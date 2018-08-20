@@ -1,8 +1,8 @@
 <div class="container">
-  <form (ngSubmit)="submitUser()" #userForm="ngForm">
+  <form (ngSubmit)="submitUser(name)" #userForm="ngForm">
     <div class="form-group">
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="inputtext"  placeholder="Enter Github username" [(ngModel)]="newSearch.name.repos" name="name" (keyup)= "submitUser(name);submitRepos(repos)" #name='ngModel'>      
+        <input type="text" class="form-control" id="inputtext"  placeholder="Enter Github username" [(ngModel)]="newSearch.name" name="name" (keyup)= "submitUser(name)" #name='ngModel'>      
       </div>
     </div>
   </form>
