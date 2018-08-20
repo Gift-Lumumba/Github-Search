@@ -10,12 +10,14 @@ import { Repos } from '../repos';
   providedIn:'root'
 })
 export class ProfileService {
-user:User;
 repos:Repos;
+user:User;
+
 repo;
+
 constructor(private http:HttpClient) { 
 this.user=new User('','','',0,'','','','','','');
-this.repos=new Repos('','');
+this.repos=new Repos('','','');
   }
 
 getProfileInfo(username){
@@ -61,13 +63,15 @@ getProfileRepo(username){
   interface ApiResponse{
     name:string;
     description:string;
+    html_url:string;
     
 }
 const promise =new Promise((resolve,reject)=>{
   this.http.get<ApiResponse>(environment.apiUrl + username + environment.repoapikey).toPromise().then(response => {
       
-      this.repos.name=response.name;
-      this.repos.description;
+      this.repo=response;
+      
+
       resolve()
     },
 
@@ -79,3 +83,8 @@ const promise =new Promise((resolve,reject)=>{
     return promise;
 }
 }
+
+
+
+
+

@@ -12,13 +12,14 @@ export class SearchFormComponent implements OnInit {
   newSearch = new Search('','','',0);
   
   submitUser(name){
-    this.profileService.getProfileInfo(name.value)
-
+    this.profileService.getProfileInfo(name.value);
+    this.repositoryService.getProfileRepo(name.value);
   }
 
-  constructor(private profileService:ProfileService) { }
+  constructor(private profileService:ProfileService,private repositoryService:ProfileService) { }
 
   ngOnInit() {
   }
 
 }
+

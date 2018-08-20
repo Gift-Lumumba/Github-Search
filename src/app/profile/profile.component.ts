@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { ProfileService } from '../services/profile.service';
 import { HttpClient } from '@angular/common/http';
+import { Repos } from '../repos';
 
 @Component({
   selector: 'app-profile',
@@ -11,15 +12,21 @@ import { HttpClient } from '@angular/common/http';
   providers: [ProfileService]
 })
 export class ProfileComponent implements OnInit {
-  public username ='Gift-Lumumba';
+  public username ='';
+  repos:Repos;
   user:User;
-  repos:any[];
 
-  constructor(private profileService:ProfileService) { }
+  constructor(private profileService:ProfileService,public repositoryService:ProfileService) { }
 
   ngOnInit() {
     this.profileService.getProfileInfo(this.username);
     this.user = this.profileService.user;
+
+    this.repositoryService.getProfileRepo(this.username);
+    this.repos = this.repositoryService.repos;
   }
 
 }
+
+
+

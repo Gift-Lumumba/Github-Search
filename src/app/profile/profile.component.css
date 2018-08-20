@@ -64,3 +64,18 @@
 #heading{
   background: black;
 }
+.reposs{
+  color: whitesmoke;
+  font-size: 25px;
+  font-family: 'Oleo Script', cursive;
+  text-decoration-line: underline;
+}
+.description{
+  color: whitesmoke;
+  font-size: 20px;
+  font-family: 'Oleo Script', cursive;
+}
+.buttons{
+  font-size: 18px;
+  font-family: 'Oleo Script', cursive;
+}
