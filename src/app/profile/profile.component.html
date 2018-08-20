@@ -54,11 +54,11 @@
                 </div>
                 <div class="panel-body" *ngFor="let repo of repos">
                   <p class="clearfix">
-                   <span class="reposs"> {{repo.name}} </span>
+                   <span class="reposs"> {{repos.name}} </span>
                   </p>
-                  <p class="description">{{repo.description}}</p>
+                  <p class="description">{{repos.description}}</p>
                   <br>
-                  <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View this project on Github</a>
+                  <a href="{{repos.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View this project on Github</a>
                 </div>
               </div>
             </div>
