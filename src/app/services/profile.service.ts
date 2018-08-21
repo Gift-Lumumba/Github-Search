@@ -17,7 +17,7 @@ repo;
 
 constructor(private http:HttpClient) { 
 this.user=new User('','','',0,'','','','','','');
-this.repos=new Repos('','','');
+this.repos=new Repos('','','',new Date(),new Date());
   }
 
 getProfileInfo(username){
@@ -64,6 +64,8 @@ getProfileRepo(username){
     name:string;
     description:string;
     html_url:string;
+    created_at:Date;
+    updated_at:Date;
     
 }
 const promise =new Promise((resolve,reject)=>{

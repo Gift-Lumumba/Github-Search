@@ -59,6 +59,10 @@
                     </p>
                     <p class="description">{{repositoryService.repo[i].description}}</p>
                     <br>
+                    <p class="creation-date">Date created: <b>{{repositoryService.repo[i].created_at}}</b></p>
+                    <br>
+                    <p class="update-date">Updated at: <b>{{repositoryService.repo[i].updated_at}}</b></p>
+                    <br>
                     <a href="{{repositoryService.repo[i].html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right buttons">View this project on Github</a>
                   </div>
                 </div>

@@ -79,3 +79,13 @@
   font-size: 18px;
   font-family: 'Oleo Script', cursive;
 }
+.creation-date{
+  font-size: 17px;
+  color: rgb(212, 25, 25);
+  font-family: 'Oleo Script', cursive;
+}
+.update-date{
+  font-size: 17px;
+  color: rgb(212, 25, 25);
+  font-family: 'Oleo Script', cursive;
+}
