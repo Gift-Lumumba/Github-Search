@@ -7,7 +7,7 @@ export class DateCountPipe implements PipeTransform {
   
   transform(value: any): string  {
 
-    return value.toUpperCase;
+    return value;
 }
 
 }
