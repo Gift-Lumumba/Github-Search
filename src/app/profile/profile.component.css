@@ -31,8 +31,11 @@
   font-size: 13px;
 }
 #email{
-  padding-left:80px; 
-  width: 300px;
+  padding-left:135px; 
+  width: 335px;
+}
+#repos-part{
+  padding-left: 60px;
 }
 #labels{
   font-size: 15px;

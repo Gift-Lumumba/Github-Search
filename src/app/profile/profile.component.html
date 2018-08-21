@@ -31,11 +31,12 @@
             </div>
             <div class="col-sm-3">
               <ul class="list-group" id="email">
-                <li class="list-group-item" *ngIf="user.email"><a href="{{user.email}}" target="_blank" id="emailocation"> {{user.email}} </a></li>
-                <li class="list-group-item" *ngIf="user.location" id="emailocation">{{user.location}}</li>
+                <li class="list-group-item" *ngIf="user.email" id="emailocation">Email-Address: <a href="{{user.email}}" target="_blank"> {{user.email}} </a></li>
+                <li class="list-group-item" *ngIf="user.location" id="emailocation">Location: <b>{{user.location}}</b></li>
+                <li class="list-group-item" *ngIf="user.created_at" id="emailocation">Account created on: <b>{{user.created_at | date}}</b></li>
               </ul>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4" id="repos-part">
               <div>
                 <p>
                   <span class="label label-info" id="labels">{{user.followers}} Followers</span>
@@ -59,9 +60,9 @@
                     </p>
                     <p class="description">{{repositoryService.repo[i].description}}</p>
                     <br>
-                    <p class="creation-date">Date created: <b>{{repositoryService.repo[i].created_at}}</b></p>
+                    <p class="creation-date">Date created: <b>{{repositoryService.repo[i].created_at|date}}</b></p>
                     <br>
-                    <p class="update-date">Updated at: <b>{{repositoryService.repo[i].updated_at}}</b></p>
+                    <p class="update-date">Updated at: <b>{{repositoryService.repo[i].updated_at|date}}</b></p>
                     <br>
                     <a href="{{repositoryService.repo[i].html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right buttons">View this project on Github</a>
                   </div>

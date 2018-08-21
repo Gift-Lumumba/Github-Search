@@ -10,6 +10,7 @@ import { ReposComponent } from './repos/repos.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { ProfileService } from './services/profile.service';
 import {FormsModule} from '@angular/forms';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {FormsModule} from '@angular/forms';
     ProfileComponent,
     ReposComponent,
     SearchFormComponent,
+    DateCountPipe,
   ],
 
   imports: [
