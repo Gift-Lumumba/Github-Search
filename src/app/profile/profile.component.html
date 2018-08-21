@@ -22,7 +22,7 @@
     <div *ngIf="user">
       <div class="panel panel-default">
         <div class="panel-heading" id="heading">
-          <p class="names">{{user.login}} &nbsp;<small>({{user.name}})</small></p>
+          <p class="names"><span class="glyphicon glyphicon-user"></span> &nbsp; {{user.login}} &nbsp;<small>({{user.name}})</small></p>
         </div>
         <div class="panel-body" id="body">
           <div class="row">
@@ -48,7 +48,7 @@
                   
                 </p>
                 <br>
-                <p><a href="{{user.html_url}}" target="_blank" class="btn btn-success btn-sm" id="view">View profile on Github</a></p>
+                <p><a href="{{user.html_url}}" target="_blank" class="btn btn-success btn-sm" id="view"> View profile on Github &nbsp; <span class="glyphicon glyphicon-share-alt"></span></a></p>
                 <br>
                 <div class="panel panel-success panel">
                   <div class="panel-heading heading">
@@ -64,7 +64,11 @@
                     <br>
                     <p class="update-date"><b class="dates">Updated on:</b> &nbsp;   <b>{{repositoryService.repo[i].updated_at|date}}</b></p>
                     <br>
-                    <a href="{{repositoryService.repo[i].html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right buttons">View this project on Github</a>
+                    <a href="{{repositoryService.repo[i].html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right buttons">View this project on Github &nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="{{repositoryService.repo[i].homepage}}" target="_blank" *ngIf="repositoryService.repo[i].homepage" class="btn btn-sm btn-success pull-right buttons">View Deployed Page &nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
                   </div>
                 </div>
               </div>
