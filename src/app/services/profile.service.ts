@@ -33,6 +33,7 @@ getProfileInfo(username){
     html_url:string;
     repos_url:string;
     created_at:Date;
+    forks:number;
     
 }
 const promise =new Promise((resolve,reject)=>{
