@@ -22,7 +22,7 @@ This application was created using:
 - Create Directory on your computer to store the application.
 - Initialise git on the target directory using the following command;
     `$ git init`
-- Run `git clone https://gift-lumumba.github.io/Github-Search/`
+- On your terminal,Run `git clone https://gift-lumumba.github.io/Github-Search/`
 - Navigate to created directory.
 - Open in your preferred text editor(atom,visual studio code or sublime text).
 
