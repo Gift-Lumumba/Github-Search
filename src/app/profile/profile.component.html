@@ -8,6 +8,15 @@
             <app-search-form></app-search-form>
         </div>
         <br>
+        <div id="userprofile">
+          <ul class="ul">
+            <li>Name is <b>{{user.name}}</b> and Github username is <b>{{user.login}}</b></li>
+            <li>Has <b>{{user.public_repos}} </b>repositories</li>
+            <li>Has <b>{{user.followers}}</b> followers</li>
+            <li>Following <b>{{user.following}}</b></li>
+          </ul>
+          
+        </div>
     </form>
     <br>
     <div *ngIf="user">
