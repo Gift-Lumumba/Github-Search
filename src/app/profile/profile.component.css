@@ -1,5 +1,5 @@
 .header{
-  color: #F15A29;
+  color: whitesmoke;
   text-align: center;
   font-size: 80px;
   font-family: 'Abril Fatface', cursive;
@@ -14,7 +14,7 @@
 }
 
 #userprofile{
-  color: #F15A29;
+  color: whitesmoke;
   font-size: 13px;
   padding-left: 120px;
 }
@@ -24,7 +24,7 @@
 }
 .names{
   font-size: 20px;
-  color: #F15A29;
+  color: whitesmoke;
   font-family: 'Oleo Script', cursive;
 }
 #emailocation{
