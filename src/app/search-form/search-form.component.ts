@@ -15,11 +15,11 @@ export class SearchFormComponent implements OnInit {
     this.profileService.getProfileInfo(name.value);
     this.repositoryService.getProfileRepo(name.value);
   }
-
+  
   constructor(private profileService:ProfileService,private repositoryService:ProfileService) { }
-
+  
   ngOnInit() {
   }
-
+  
 }
 

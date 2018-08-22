@@ -20,7 +20,7 @@ import { DateCountPipe } from './date-count.pipe';
     SearchFormComponent,
     DateCountPipe,
   ],
-
+  
   imports: [
     BrowserModule,
     HttpClientModule,

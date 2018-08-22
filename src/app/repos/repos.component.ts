@@ -12,11 +12,11 @@ import { Repos } from '../repos';
 export class ReposComponent implements OnInit {
   repos: Repos;
   constructor(private profileService: ProfileService, public repositoryService: ProfileService) { }
-
+  
   ngOnInit() {
-
+    
   }
-
+  
 }
 
 

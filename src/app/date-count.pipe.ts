@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DateCountPipe implements PipeTransform {
   
   transform(value: any): string  {
-
+    
     return value;
-}
-
+  }
+  
 }

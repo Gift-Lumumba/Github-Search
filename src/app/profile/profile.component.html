@@ -1,75 +1,74 @@
 <div class="container-fluid">
+  <br>
+  <ng-progress></ng-progress>
+  <h1 class="header">Github Search</h1>
+  <br>
+  <form action="">
+    <div class="form-group">
+      <app-search-form></app-search-form>
+    </div>
     <br>
-    <ng-progress></ng-progress>
-    <h1 class="header">Github Search</h1>
-      <br>
-      <form action="">
-        <div class="form-group">
-            <app-search-form></app-search-form>
-        </div>
-        <br>
-        <div id="userprofile">
-          <ul class="ul">
-            <li>Name is <b>{{user.name}}</b> and Github username is <b>{{user.login}}</b></li>
-            <li>Has <b>{{user.public_repos}} </b>repositories</li>
-            <li>Has <b>{{user.followers}}</b> followers</li>
-            <li>Following <b>{{user.following}}</b></li>
-          </ul>
-          
-        </div>
-    </form>
-    <br>
-    <div *ngIf="user">
-      <div class="panel panel-default">
-        <div class="panel-heading" id="heading">
-          <p class="names"><span class="glyphicon glyphicon-user"></span> &nbsp; {{user.login}} &nbsp;<small>({{user.name}})</small></p>
-        </div>
-        <div class="panel-body" id="body">
-          <div class="row">
-            <div class="col-sm-3">
-              <img src="{{user.avatar_url}}" class="img-circle" alt="">
-            </div>
-            <div class="col-sm-3">
-              <ul class="list-group" id="email">
-                <li class="list-group-item" *ngIf="user.email" id="emailocation">Email-Address: <a href="{{user.email}}" target="_blank"> {{user.email}} </a></li>
-                <li class="list-group-item" *ngIf="user.location" id="emailocation">Location: <b>{{user.location}}</b></li>
-                <li class="list-group-item" *ngIf="user.created_at" id="emailocation">Account created on: <b>{{user.created_at | date}}</b></li>
-              </ul>
-            </div>
-            <div class="col-sm-4" id="repos-part">
-              <div>
-                <p>
-                  <span class="label label-info" id="labels">{{user.followers}} Followers</span>
-                  &nbsp;
-                  <span class="label label-warning" id="labels">{{user.following}} Following</span>
-                  &nbsp;
-                  <span class="label label-danger" id="labels">{{user.public_repos}} Repositories</span>
-                  &nbsp;
-                  
-                </p>
-                <br>
-                <p><a href="{{user.html_url}}" target="_blank" class="btn btn-success btn-sm" id="view"> View profile on Github &nbsp; <span class="glyphicon glyphicon-share-alt"></span></a></p>
-                <br>
-                <div class="panel panel-success panel">
-                  <div class="panel-heading heading">
-                    <h3 class="panel-title" class="repos">Repositories</h3>
-                  </div>
-                  <div class="panel-body" *ngFor="let repo of repositoryService.repo ; let i = index">
-                    <p class="clearfix">
-                     <span class="reposs"> {{repositoryService.repo[i].name}} </span>
-                    </p>
-                    <p class="description">{{repositoryService.repo[i].description}}</p>
-                    <br>
-                    <p class="creation-date"><b class="dates">Date created:</b> &nbsp;  <b>{{repositoryService.repo[i].created_at|date}}</b></p>
-                    <br>
-                    <p class="update-date"><b class="dates">Updated on:</b> &nbsp;   <b>{{repositoryService.repo[i].updated_at|date}}</b></p>
-                    <br>
-                    <a href="{{repositoryService.repo[i].html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right buttons">View this project on Github &nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
-                    <br>
-                    <br>
-                    <br>
-                    <a href="{{repositoryService.repo[i].homepage}}" target="_blank" *ngIf="repositoryService.repo[i].homepage" class="btn btn-sm btn-success pull-right buttons">View Deployed Page &nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
-                  </div>
+    <div id="userprofile">
+      <ul class="ul">
+        <li>Name is <b>{{user.name}}</b> and Github username is <b>{{user.login}}</b></li>
+        <li>Has <b>{{user.public_repos}} </b>repositories</li>
+        <li>Has <b>{{user.followers}}</b> followers</li>
+        <li>Following <b>{{user.following}}</b></li>
+      </ul>
+      
+    </div>
+  </form>
+  <br>
+  <div *ngIf="user">
+    <div class="panel panel-default">
+      <div class="panel-heading" id="heading">
+        <p class="names"><span class="glyphicon glyphicon-user"></span> &nbsp; {{user.login}} &nbsp;<small>({{user.name}})</small></p>
+      </div>
+      <div class="panel-body" id="body">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="{{user.avatar_url}}" class="img-circle" alt="">
+          </div>
+          <div class="col-sm-3">
+            <ul class="list-group" id="email">
+              <li class="list-group-item" *ngIf="user.email" id="emailocation">Email-Address: <a href="{{user.email}}" target="_blank"> {{user.email}} </a></li>
+              <li class="list-group-item" *ngIf="user.location" id="emailocation">Location: <b>{{user.location}}</b></li>
+              <li class="list-group-item" *ngIf="user.created_at" id="emailocation">Account created on: <b>{{user.created_at | date}}</b></li>
+            </ul>
+          </div>
+          <div class="col-sm-4" id="repos-part">
+            <div>
+              <p>
+                <span class="label label-info" id="labels">{{user.followers}} Followers</span>
+                &nbsp;
+                <span class="label label-warning" id="labels">{{user.following}} Following</span>
+                &nbsp;
+                <span class="label label-danger" id="labels">{{user.public_repos}} Repositories</span>
+                &nbsp;
+                
+              </p>
+              <br>
+              <p><a href="{{user.html_url}}" target="_blank" class="btn btn-success btn-sm" id="view"> View profile on Github &nbsp; <span class="glyphicon glyphicon-share-alt"></span></a></p>
+              <br>
+              <div class="panel panel-success panel">
+                <div class="panel-heading heading">
+                  <h3 class="panel-title" class="repos">Repositories</h3>
+                </div>
+                <div class="panel-body" *ngFor="let repo of repositoryService.repo ; let i = index">
+                  <p class="clearfix">
+                    <span class="reposs"> {{repositoryService.repo[i].name}} </span>
+                  </p>
+                  <p class="description">{{repositoryService.repo[i].description}}</p>
+                  <br>
+                  <p class="creation-date"><b class="dates">Date created:</b> &nbsp;  <b>{{repositoryService.repo[i].created_at|date}}</b></p>
+                  <br>
+                  <p class="update-date"><b class="dates">Updated on:</b> &nbsp;   <b>{{repositoryService.repo[i].updated_at|date}}</b></p>
+                  <br>
+                  <a href="{{repositoryService.repo[i].html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right buttons">View this project on Github &nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
+                  <br>
+                  <br>
+                  <br>
+                  <a href="{{repositoryService.repo[i].homepage}}" target="_blank" *ngIf="repositoryService.repo[i].homepage" class="btn btn-sm btn-success pull-right buttons">View Deployed Page &nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
                 </div>
               </div>
             </div>
@@ -78,3 +77,4 @@
       </div>
     </div>
   </div>
+</div>
